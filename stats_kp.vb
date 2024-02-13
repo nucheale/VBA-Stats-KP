@@ -1,21 +1,3 @@
-'i.zabolotny@spb-neo.ru
-
-Function getMaxTwoDimArrayValue(arr) As Double
-    maxValue = arr(LBound(arr), 1)
-    For i = LBound(arr, 1) To UBound(arr, 1)
-        If arr(i, 1) > maxValue Then maxValue = arr(i, 1)
-    Next i
-    getMaxTwoDimArrayValue = maxValue
-End Function
-
-Function getMinTwoDimArrayValue(arr) As Double
-    minValue = arr(LBound(arr), 1)
-    For i = LBound(arr, 1) To UBound(arr, 1)
-        If arr(i, 1) < minValue Then minValue = arr(i, 1)
-    Next i
-    getMinTwoDimArrayValue = minValue
-End Function
-
 Function removeDublicatesFromTwoDimArray(arr)
     Set dict = CreateObject("Scripting.Dictionary")
     For i = LBound(arr, 1) To UBound(arr, 1)
